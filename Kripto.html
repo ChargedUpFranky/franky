@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>$FRANKY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 0;
+            background: #000;
+            padding: 32px 0;
+            background-image:
+                radial-gradient(circle at 20% 30%, #9f869b 0%, #4c3b54 70%),
+                radial-gradient(circle at 50% 50%, #ff00cc22 0%, #000 80%);
+        }
+        .container {
+            text-align: center;
+            width: 320px;
+            height: 400px;
+            max-width: 320px;
+            background: rgba(20, 20, 20, 0.85);
+            border-radius: 12px;
+            padding: 32px 16px;
+            box-shadow: 0 0 32px #342536;
+            margin: 0 auto 32px auto;
+        }
+    
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #e9a5f4;
+            margin-bottom: 18px;
+            background: #222;
+        }
+        h1 {
+            color: #fff;
+            margin-bottom: 24px;
+        }
+        a {
+            display: block;
+            margin: 18px 0;
+            padding: 12px 0;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 1.1em;
+            background: linear-gradient(90deg, #9f869b 0%, #4c3b54 100%);
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin: 24px 0;
+        }
+        .social-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background:transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            
+        }
+        .social-icon:hover img {
+            transform: scale(1.18);
+           
+        }
+        .social-icon img {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            transition: transform 0.2s;
+        }
+        .text-container {
+            width: 100%;
+            max-width: 320px;
+            margin:auto;
+            margin-bottom: 80px;
+            background: rgba(20, 20, 20, 0.85);
+            border-radius: 12px;
+            padding: 24px 16px;
+            color: #fff;
+            box-shadow: 0 0 16px #342536;
+            text-align:center;
+            font-size: 1em;
+        }
+        .text-container p {
+            position:relative;
+            max-width:80%;
+            margin: auto;
+
+        }   
+        h2 {
+            margin-top: 0px;
+        }
+        .ca {
+            text-align: center;
+            width: 320px;
+            height: auto;
+            background: rgba(20, 20, 20, 0.85);
+            border-radius: 30px;
+            padding: 32px 16px;
+            box-shadow: 0 0 32px #342536;
+            margin: 0 auto 32px auto;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+        .ca p {
+            color: #fff;
+            font-size: 1.2em;
+            margin: 0;
+            padding: 0 16px;
+            word-break: break-all;
+        }
+        .ca p:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="slikice/franky_1k.png" alt="Profile Picture" class="profile-pic">
+        <h1>$FRANKY</h1>
+        <div class="socials">
+            <a href="https://t.me/yourtelegram" target="_blank" class="social-icon">
+                <img src="slikice/tgggg.png" alt="Telegram">
+            </a>
+            <a href="https://x.com/ChargedUpFranky" target="_blank" class="social-icon">
+                <img src="slikice/X-Logo.png" alt="Twitter">
+            </a>
+            <a href="https://www.dextools.io/app/en/yourcoin" target="_blank" class="social-icon">
+                <img src="slikice/dexu.png" alt="Coin">
+            </a>
+        </div>
+    </div>
+    <div class="ca">
+        <p id="ca-address" title="Klikni za kopiranje" style="cursor: pointer;">
+            G5auvbjZqY95JJwEec5QdDjiSg4qAs2stuTV4qHNbonk
+        </p>
+    </div>
+    <script>
+        const caAddress = document.getElementById('ca-address');
+        caAddress.addEventListener('click', function() {
+            navigator.clipboard.writeText("G5auvbjZqY95JJwEec5QdDjiSg4qAs2stuTV4qHNbonk").then(function() {
+                caAddress.innerText = "Copied!";
+                setTimeout(function() {
+                    caAddress.innerText = "G5auvbjZqY95JJwEec5QdDjiSg4qAs2stuTV4qHNbonk";
+                }, 1200);
+            });
+        });
+    </script>
+    <div class="text-container">
+        <h2>About $FRANKY</h2>
+        <p>
+            Dr. Stein, the infamous Cryptomancer, has channeled all of his lonesome life's work into creating Franky - the only thing he now recognizes as legacy, or perhaps even, family. Franky is a lively lad, running on power spikes from his pops's lab. Becoming overexcited and causing mayhem usually gets him grounded, which is when he enjoys brainrot scrolling, to barely keep his spirits up.
+        </p>
+    </div>
+</body>
+</html>
